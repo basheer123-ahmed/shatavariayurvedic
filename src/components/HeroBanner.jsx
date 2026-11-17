@@ -49,7 +49,7 @@ export const HeroBanner = () => {
       badgeTitle: 'Trusted by 25,000+',
       badgeSubtitle: 'Vedic Wellness Enthusiasts',
       bgGradient: 'from-[#FAF7F2] via-[#F4ECE1] to-[#EAE0CF]',
-      accentGradient: 'from-[#8C5E1A] via-[#C59A3F] to-[#996B20]'
+      accentGradient: 'from-[#8C5E1A] via-[#9E6D18] to-[#6E460E]'
     },
     {
       id: 'slide-skincare',
@@ -79,7 +79,7 @@ export const HeroBanner = () => {
       badgeTitle: 'Kashmiri Saffron',
       badgeSubtitle: 'Deep Dermal Illuminating Elixir',
       bgGradient: 'from-[#FAF7F2] via-[#FBF0E1] to-[#F5E2C9]',
-      accentGradient: 'from-[#B55A1A] via-[#E28D38] to-[#994711]'
+      accentGradient: 'from-[#9A460F] via-[#B85817] to-[#783007]'
     },
     {
       id: 'slide-juices',
@@ -109,7 +109,7 @@ export const HeroBanner = () => {
       badgeTitle: 'Cold Macerated',
       badgeSubtitle: 'Zero Added Water or Sugar',
       bgGradient: 'from-[#FAF8F2] via-[#EFF5E4] to-[#DFEDCC]',
-      accentGradient: 'from-[#3A6B25] via-[#5C9E38] to-[#2B5418]'
+      accentGradient: 'from-[#2D5A1A] via-[#3F7C25] to-[#1E3F10]'
     },
     {
       id: 'slide-haircare',
@@ -139,7 +139,7 @@ export const HeroBanner = () => {
       badgeTitle: 'Reduced Hairfall',
       badgeSubtitle: 'Visible Results in 4-6 Weeks',
       bgGradient: 'from-[#FAF7F2] via-[#EDF5EE] to-[#DDECDD]',
-      accentGradient: 'from-[#153C27] via-[#2F7347] to-[#0E2C1B]'
+      accentGradient: 'from-[#153C27] via-[#245D39] to-[#0D2819]'
     }
   ];
 
@@ -211,13 +211,16 @@ export const HeroBanner = () => {
           {/* Rounded Promotional Card Container */}
           <div
             key={`mobile-${current.id}`}
-            className={`relative w-full h-[195px] sm:h-[220px] rounded-2xl overflow-hidden shadow-md border-2 border-[#C59A3F]/50 bg-gradient-to-r ${current.bgGradient} p-3.5 flex items-center justify-between animate-fadeIn transition-all duration-500`}
+            className={`relative w-full h-[195px] sm:h-[220px] rounded-2xl overflow-hidden shadow-lg border-2 border-[#C59A3F] ring-2 ring-[#C59A3F]/20 bg-gradient-to-r ${current.bgGradient} p-3.5 flex items-center justify-between animate-fadeIn transition-all duration-500`}
           >
+            {/* Inset Decorative Gold Border */}
+            <div className="absolute inset-1.5 rounded-[12px] border border-[#C59A3F]/35 pointer-events-none" />
+
             {/* Traditional Ornamental Corner Accents (Matching user's screenshot) */}
-            <div className="absolute top-1 left-1 w-3 h-3 border-t-2 border-l-2 border-[#C59A3F] pointer-events-none" />
-            <div className="absolute top-1 right-1 w-3 h-3 border-t-2 border-r-2 border-[#C59A3F] pointer-events-none" />
-            <div className="absolute bottom-1 left-1 w-3 h-3 border-b-2 border-l-2 border-[#C59A3F] pointer-events-none" />
-            <div className="absolute bottom-1 right-1 w-3 h-3 border-b-2 border-r-2 border-[#C59A3F] pointer-events-none" />
+            <div className="absolute top-2 left-2 w-3.5 h-3.5 border-t-2 border-l-2 border-[#C59A3F] rounded-tl pointer-events-none" />
+            <div className="absolute top-2 right-2 w-3.5 h-3.5 border-t-2 border-r-2 border-[#C59A3F] rounded-tr pointer-events-none" />
+            <div className="absolute bottom-2 left-2 w-3.5 h-3.5 border-b-2 border-l-2 border-[#C59A3F] rounded-bl pointer-events-none" />
+            <div className="absolute bottom-2 right-2 w-3.5 h-3.5 border-b-2 border-r-2 border-[#C59A3F] rounded-br pointer-events-none" />
 
             {/* Left 62% Content Column */}
             <div className="w-[62%] z-10 flex flex-col justify-between h-full pr-1">
@@ -329,8 +332,16 @@ export const HeroBanner = () => {
           {/* Desktop 2-Column Layout */}
           <div
             key={`desktop-${current.id}`}
-            className={`rounded-3xl p-8 lg:p-12 border-2 border-[#E2D5BF] bg-gradient-to-r ${current.bgGradient} grid grid-cols-12 gap-8 items-center shadow-sm animate-fadeIn`}
+            className={`relative rounded-3xl p-8 lg:p-12 border-2 border-[#C59A3F] ring-4 ring-[#C59A3F]/15 bg-gradient-to-r ${current.bgGradient} grid grid-cols-12 gap-8 items-center shadow-xl shadow-[#153C27]/5 animate-fadeIn overflow-hidden`}
           >
+            {/* Luxury Ayurvedic Inset Gold Border */}
+            <div className="absolute inset-2.5 rounded-[22px] border border-[#C59A3F]/35 pointer-events-none" />
+
+            {/* Traditional Ayurvedic Gold Corner Accents */}
+            <div className="absolute top-3.5 left-3.5 w-7 h-7 border-t-2 border-l-2 border-[#C59A3F] rounded-tl pointer-events-none" />
+            <div className="absolute top-3.5 right-3.5 w-7 h-7 border-t-2 border-r-2 border-[#C59A3F] rounded-tr pointer-events-none" />
+            <div className="absolute bottom-3.5 left-3.5 w-7 h-7 border-b-2 border-l-2 border-[#C59A3F] rounded-bl pointer-events-none" />
+            <div className="absolute bottom-3.5 right-3.5 w-7 h-7 border-b-2 border-r-2 border-[#C59A3F] rounded-br pointer-events-none" />
             {/* Left 7 Cols */}
             <div className="col-span-7 space-y-4">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-[#D4C3A6] text-xs font-semibold text-[#153C27] tracking-wider uppercase shadow-xs">
