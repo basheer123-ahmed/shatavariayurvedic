@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="skin-aura" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FCEFD8" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#F7DFB3" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#FAF7F2" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="gold-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="40%" stop-color="#FFF3A8" />
+      <stop offset="80%" stop-color="#B8860B" />
+      <stop offset="100%" stop-color="#8B6508" />
+    </linearGradient>
+    <filter id="hero-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="20" flood-color="#2D1A08" flood-opacity="0.22" />
+    </filter>
+  </defs>
+
+  <!-- Stage Podium -->
+  <ellipse cx="350" cy="520" rx="300" ry="40" fill="url(#skin-aura)" />
+  <ellipse cx="350" cy="525" rx="220" ry="22" fill="#3D200A" opacity="0.12" />
+
+  <!-- Botanical foliage -->
+  <g opacity="0.2" transform="translate(60, 110)">
+    <path d="M 0 160 C 90 60 180 30 260 0 C 220 80 180 180 80 220 Z" fill="#994D12" />
+  </g>
+  <g opacity="0.2" transform="translate(640, 130) scale(-1, 1)">
+    <path d="M 0 160 C 90 60 180 30 260 0 C 220 80 180 180 80 220 Z" fill="#C26A18" />
+  </g>
+
+  <!-- LEFT: Aloe Vera & Shatavari Gel Tub -->
+  <g transform="translate(90, 160) scale(0.85)" filter="url(#hero-shadow)">
+    <rect x="160" y="115" width="180" height="38" rx="8" fill="url(#gold-metal)" />
+    <rect x="145" y="167" width="210" height="240" rx="18" fill="#1C653C" />
+    <rect x="155" y="200" width="190" height="195" rx="8" fill="#0E3D22" stroke="#A8F2BE" stroke-width="2" />
+    <text x="250" y="255" font-family="'Playfair Display', serif" font-size="11" font-weight="700" fill="#A8F2BE" text-anchor="middle">SHATAVARI</text>
+    <text x="250" y="295" font-family="'Playfair Display', serif" font-size="15" font-weight="800" fill="#FFF" text-anchor="middle">ALOE &amp; SHATAVARI</text>
+    <text x="250" y="315" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#E8D7BF" text-anchor="middle">Multi-Benefit Soothing Gel</text>
+    <rect x="175" y="332" width="150" height="22" rx="11" fill="#A8F2BE" />
+    <text x="250" y="347" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" fill="#0E3D22" text-anchor="middle">99% PURE INNER LEAF</text>
+  </g>
+
+  <!-- RIGHT: Saffron & Sandalwood Radiance Cream Jar -->
+  <g transform="translate(370, 160) scale(0.85)" filter="url(#hero-shadow)">
+    <rect x="145" y="120" width="210" height="42" rx="10" fill="url(#gold-metal)" />
+    <rect x="135" y="178" width="230" height="235" rx="20" fill="#FFF8ED" stroke="#ECC468" stroke-width="2" />
+    <rect x="152" y="200" width="196" height="190" rx="10" fill="#4D2604" stroke="#ECC468" stroke-width="2.2" />
+    <text x="250" y="255" font-family="'Playfair Display', serif" font-size="11" font-weight="700" fill="#ECC468" text-anchor="middle">SHATAVARI</text>
+    <text x="250" y="295" font-family="'Playfair Display', serif" font-size="15" font-weight="800" fill="#FFF" text-anchor="middle">SAFFRON &amp; SANDAL</text>
+    <text x="250" y="315" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#E8D7BF" text-anchor="middle">Radiant Day Moisturizer</text>
+    <rect x="175" y="330" width="150" height="22" rx="11" fill="url(#gold-metal)" />
+    <text x="250" y="345" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" fill="#1C1808" text-anchor="middle">MYSORE SANDALWOOD</text>
+  </g>
+
+  <!-- CENTER FRONT: Kumkumadi Miraculous Beauty Oil -->
+  <g transform="translate(200, 110) scale(1.05)" filter="url(#hero-shadow)">
+    <!-- Dropper Bulb & Pipette -->
+    <path d="M 238 65 C 238 52 242 45 250 45 C 258 45 262 52 262 65 L 260 85 L 240 85 Z" fill="#222222" />
+    <rect x="232" y="85" width="36" height="40" rx="3" fill="url(#gold-metal)" />
+    <rect x="226" y="125" width="48" height="15" rx="3" fill="#FFD700" />
+    <!-- Body -->
+    <path d="M 200 140 L 226 140 L 226 135 L 274 135 L 274 140 L 300 140 C 322 140 338 156 340 180 L 340 410 C 340 435 322 450 295 450 L 205 450 C 178 450 160 435 160 410 L 160 180 C 162 156 178 140 200 140 Z" fill="#C63F17" />
+    <rect x="170" y="195" width="160" height="210" rx="6" fill="#260B03" stroke="#FFD700" stroke-width="2.2" />
+    <circle cx="250" cy="228" r="16" fill="#FFD700" opacity="0.3" />
+    <text x="250" y="252" font-family="'Playfair Display', serif" font-size="11" font-weight="700" fill="#FFD700" text-anchor="middle">SHATAVARI</text>
+    <text x="250" y="263" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#FFF" text-anchor="middle">AYURVEDIC</text>
+    <line x1="190" y1="272" x2="310" y2="272" stroke="#FFD700" stroke-width="1.2" />
+    <text x="250" y="295" font-family="'Playfair Display', serif" font-size="15" font-weight="800" fill="#FFF" text-anchor="middle">KUMKUMADI</text>
+    <text x="250" y="312" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#EAD9BD" text-anchor="middle">Miraculous Beauty Oil</text>
+    <rect x="185" y="326" width="130" height="22" rx="11" fill="url(#gold-metal)" />
+    <text x="250" y="341" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" fill="#1C1808" text-anchor="middle">KASHMIRI SAFFRON</text>
+    <text x="250" y="366" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" fill="#FFD700" text-anchor="middle">26-HERB VEDIC ELIXIR</text>
+    <text x="250" y="386" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">NET VOL: 30 ML</text>
+  </g>
+
+  <!-- Glowing Saffron Seal -->
+  <g transform="translate(540, 440)">
+    <circle cx="50" cy="50" r="46" fill="url(#gold-metal)" filter="url(#hero-shadow)" />
+    <circle cx="50" cy="50" r="40" fill="#4A1806" />
+    <text x="50" y="44" font-family="'Playfair Display', serif" font-size="10" font-weight="800" fill="#FFD700" text-anchor="middle">100% PURE</text>
+    <text x="50" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#FFF" text-anchor="middle">RED SAFFRON</text>
+    <text x="50" y="68" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" fill="#E8D7BF" text-anchor="middle">RADIANT GLOW</text>
+  </g>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="juice-aura" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#E4EFC7" stop-opacity="0.85" />
+      <stop offset="60%" stop-color="#D7E8B3" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FAF7F2" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="gold-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="40%" stop-color="#FFF3A8" />
+      <stop offset="80%" stop-color="#B8860B" />
+      <stop offset="100%" stop-color="#8B6508" />
+    </linearGradient>
+    <filter id="hero-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="20" flood-color="#122518" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Stage Podium -->
+  <ellipse cx="350" cy="520" rx="300" ry="40" fill="url(#juice-aura)" />
+  <ellipse cx="350" cy="525" rx="220" ry="22" fill="#1C381E" opacity="0.14" />
+
+  <!-- Botanical foliage -->
+  <g opacity="0.25" transform="translate(60, 110)">
+    <path d="M 0 160 C 90 60 180 30 260 0 C 220 80 180 180 80 220 Z" fill="#3B6922" />
+  </g>
+  <g opacity="0.25" transform="translate(640, 130) scale(-1, 1)">
+    <path d="M 0 160 C 90 60 180 30 260 0 C 220 80 180 180 80 220 Z" fill="#507F1A" />
+  </g>
+
+  <!-- LEFT: Triphala Juice Bottle -->
+  <g transform="translate(80, 130) scale(0.85)" filter="url(#hero-shadow)">
+    <path d="M 180 140 L 220 140 L 220 115 L 280 115 L 280 140 L 320 140 C 345 140 365 160 365 190 L 365 420 C 365 440 345 455 320 455 L 180 455 C 155 455 135 440 135 420 L 135 190 C 135 160 155 140 180 140 Z" fill="#4B220B" />
+    <rect x="212" y="70" width="76" height="52" rx="6" fill="url(#gold-metal)" />
+    <rect x="210" y="122" width="80" height="18" rx="4" fill="#E8A344" />
+    <rect x="145" y="200" width="210" height="205" rx="8" fill="#301406" stroke="#E8A344" stroke-width="2" />
+    <text x="250" y="255" font-family="'Playfair Display', serif" font-size="11" font-weight="700" fill="#E8A344" text-anchor="middle">SHATAVARI</text>
+    <text x="250" y="295" font-family="'Playfair Display', serif" font-size="16" font-weight="800" fill="#FFF" text-anchor="middle">TRIPHALA DETOX</text>
+    <text x="250" y="315" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#EAD9BD" text-anchor="middle">Colon &amp; Digestion Care</text>
+    <rect x="180" y="334" width="140" height="20" rx="10" fill="#E8A344" />
+    <text x="250" y="348" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" fill="#1C1808" text-anchor="middle">500 ML • GUT CLEANSE</text>
+  </g>
+
+  <!-- RIGHT: Giloy & Papaya Juice Bottle -->
+  <g transform="translate(370, 130) scale(0.85)" filter="url(#hero-shadow)">
+    <path d="M 180 140 L 220 140 L 220 115 L 280 115 L 280 140 L 320 140 C 345 140 365 160 365 190 L 365 420 C 365 440 345 455 320 455 L 180 455 C 155 455 135 440 135 420 L 135 190 C 135 160 155 140 180 140 Z" fill="#244B15" />
+    <rect x="212" y="70" width="76" height="52" rx="6" fill="url(#gold-metal)" />
+    <rect x="210" y="122" width="80" height="18" rx="4" fill="#F59A23" />
+    <rect x="145" y="200" width="210" height="205" rx="8" fill="#18360E" stroke="#F59A23" stroke-width="2" />
+    <text x="250" y="255" font-family="'Playfair Display', serif" font-size="11" font-weight="700" fill="#F59A23" text-anchor="middle">SHATAVARI</text>
+    <text x="250" y="295" font-family="'Playfair Display', serif" font-size="15" font-weight="800" fill="#FFF" text-anchor="middle">GILOY PAPAYA</text>
+    <text x="250" y="315" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#EAD9BD" text-anchor="middle">Immunity &amp; Platelet Shield</text>
+    <rect x="180" y="334" width="140" height="20" rx="10" fill="#F59A23" />
+    <text x="250" y="348" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" fill="#1C1808" text-anchor="middle">500 ML • AMRITA TONIC</text>
+  </g>
+
+  <!-- CENTER FRONT: Wild Amla Juice -->
+  <g transform="translate(195, 105) scale(1.05)" filter="url(#hero-shadow)">
+    <path d="M 180 140 L 220 140 L 220 115 L 280 115 L 280 140 L 320 140 C 345 140 365 160 365 190 L 365 420 C 365 440 345 455 320 455 L 180 455 C 155 455 135 440 135 420 L 135 190 C 135 160 155 140 180 140 Z" fill="#375C11" />
+    <rect x="212" y="70" width="76" height="52" rx="6" fill="url(#gold-metal)" stroke="#9A7010" stroke-width="2" />
+    <rect x="210" y="122" width="80" height="18" rx="4" fill="#F5BE2C" />
+    <rect x="145" y="200" width="210" height="205" rx="8" fill="#223C0A" stroke="#F5BE2C" stroke-width="2.5" />
+    <circle cx="250" cy="235" r="18" fill="#F5BE2C" opacity="0.3" />
+    <text x="250" y="258" font-family="'Playfair Display', serif" font-size="12" font-weight="700" fill="#F5BE2C" text-anchor="middle">SHATAVARI</text>
+    <text x="250" y="270" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#FFF" text-anchor="middle">AYURVEDIC</text>
+    <line x1="180" y1="278" x2="320" y2="278" stroke="#F5BE2C" stroke-width="1.2" />
+    <text x="250" y="303" font-family="'Playfair Display', serif" font-size="17" font-weight="800" fill="#FFF" text-anchor="middle">WILD AMLA JUICE</text>
+    <text x="250" y="322" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#E8D7BF" text-anchor="middle">20x Vitamin C Concentration</text>
+    <rect x="175" y="336" width="150" height="24" rx="12" fill="url(#gold-metal)" />
+    <text x="250" y="352" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#1C1808" text-anchor="middle">COLD PRESSED • PURE</text>
+    <text x="250" y="380" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">NET VOL: 500 ML</text>
+  </g>
+
+  <!-- Fresh Juice Seal Badge -->
+  <g transform="translate(540, 440)">
+    <circle cx="50" cy="50" r="46" fill="url(#gold-metal)" filter="url(#hero-shadow)" />
+    <circle cx="50" cy="50" r="40" fill="#24450D" />
+    <text x="50" y="44" font-family="'Playfair Display', serif" font-size="10" font-weight="800" fill="#F5BE2C" text-anchor="middle">COLD-PRESSED</text>
+    <text x="50" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#FFF" text-anchor="middle">ZERO SUGAR</text>
+    <text x="50" y="68" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" fill="#E8D7BF" text-anchor="middle">100% HERBAL</text>
+  </g>
+</svg>

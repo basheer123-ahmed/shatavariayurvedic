@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" width="100%" height="100%">
+  <defs>
+    <!-- Soft floor shadow -->
+    <filter id="bottle-shadow" x="-30%" y="-10%" width="160%" height="130%">
+      <feDropShadow dx="0" dy="28" stdDeviation="22" flood-color="#140B04" flood-opacity="0.28" />
+    </filter>
+
+    <!-- Amber glass gradient -->
+    <linearGradient id="amber-glass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4A2508" />
+      <stop offset="12%" stop-color="#B87322" />
+      <stop offset="35%" stop-color="#EAA642" />
+      <stop offset="65%" stop-color="#CA8324" />
+      <stop offset="88%" stop-color="#8C460E" />
+      <stop offset="100%" stop-color="#3A1C05" />
+    </linearGradient>
+
+    <!-- Golden herbal liquid inside -->
+    <linearGradient id="herbal-oil" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A8681A" />
+      <stop offset="25%" stop-color="#DF9C36" />
+      <stop offset="60%" stop-color="#F2B954" />
+      <stop offset="85%" stop-color="#B8721A" />
+      <stop offset="100%" stop-color="#703C08" />
+    </linearGradient>
+
+    <!-- Glass pipette tube reflection -->
+    <linearGradient id="pipette-glass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6" />
+      <stop offset="30%" stop-color="#FFEBB8" stop-opacity="0.3" />
+      <stop offset="70%" stop-color="#9C5A14" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Black rubber bulb gradient -->
+    <linearGradient id="rubber-bulb" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#181818" />
+      <stop offset="30%" stop-color="#3D3D3D" />
+      <stop offset="55%" stop-color="#555555" />
+      <stop offset="75%" stop-color="#282828" />
+      <stop offset="100%" stop-color="#121212" />
+    </linearGradient>
+
+    <!-- Matte black cap collar -->
+    <linearGradient id="cap-collar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#151515" />
+      <stop offset="20%" stop-color="#383838" />
+      <stop offset="50%" stop-color="#4A4A4A" />
+      <stop offset="80%" stop-color="#242424" />
+      <stop offset="100%" stop-color="#0F0F0F" />
+    </linearGradient>
+
+    <!-- Label dark gradient -->
+    <linearGradient id="label-dark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#181818" />
+      <stop offset="50%" stop-color="#262626" />
+      <stop offset="100%" stop-color="#121212" />
+    </linearGradient>
+
+    <radialGradient id="podium-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8DAC1" stop-opacity="0.7" />
+      <stop offset="65%" stop-color="#FAF7F2" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient Shadow & Natural Wooden Base -->
+  <ellipse cx="250" cy="655" rx="180" ry="22" fill="url(#podium-glow)" />
+  <ellipse cx="250" cy="658" rx="130" ry="14" fill="#241306" opacity="0.22" />
+
+  <!-- Botanical Herb Leaves in background (Matching Reference 2) -->
+  <g opacity="0.32" transform="translate(60, 160)">
+    <path d="M 0 180 C 80 80 140 40 210 0 C 180 80 140 180 50 220 Z" fill="#2E5A35" />
+    <path d="M 20 170 Q 110 80 190 20" stroke="#18361D" stroke-width="2" fill="none" />
+  </g>
+  <g opacity="0.25" transform="translate(420, 260) scale(-1, 1)">
+    <path d="M 0 160 C 70 70 120 30 180 0 C 150 70 120 160 40 200 Z" fill="#476E36" />
+  </g>
+
+  <!-- === BOTTLE ASSEMBLY === -->
+  <g filter="url(#bottle-shadow)">
+    
+    <!-- 1. Thick Amber Glass Base & Lower Liquid -->
+    <rect x="155" y="635" width="190" height="22" rx="11" fill="url(#amber-glass)" />
+    
+    <!-- 2. Main Amber Glass Body -->
+    <!-- Shoulder curve + Cylinder body -->
+    <path
+      d="M 208 275 L 292 275 C 315 275 342 300 345 335 L 345 635 C 345 645 338 652 325 652 L 175 652 C 162 652 155 645 155 635 L 155 335 C 158 300 185 275 208 275 Z"
+      fill="url(#amber-glass)"
+    />
+
+    <!-- Internal Liquid Meniscus & Volume -->
+    <path
+      d="M 160 350 C 160 325 185 305 208 300 L 292 300 C 315 305 340 325 340 350 L 340 632 C 340 642 334 646 322 646 L 178 646 C 166 646 160 642 160 632 Z"
+      fill="url(#herbal-oil)"
+      opacity="0.9"
+    />
+
+    <!-- Glass Neck Rings (Reference 1 & 2) -->
+    <!-- Screw thread rings in transparent amber glass -->
+    <rect x="212" y="235" width="76" height="42" rx="6" fill="url(#amber-glass)" />
+    <path d="M 210 248 Q 250 252 290 248" stroke="#FFE7A3" stroke-width="3" stroke-linecap="round" opacity="0.6" fill="none" />
+    <path d="M 210 262 Q 250 266 290 262" stroke="#FFE7A3" stroke-width="3" stroke-linecap="round" opacity="0.6" fill="none" />
+
+    <!-- 3. Internal Glass Pipette (Visible through amber glass and golden oil!) -->
+    <rect x="243" y="210" width="14" height="400" rx="3" fill="url(#pipette-glass)" />
+    <!-- Pipette tapered glass tip -->
+    <polygon points="243,610 257,610 254,635 246,635" fill="url(#pipette-glass)" />
+    <!-- Golden oil inside pipette tube -->
+    <rect x="246" y="320" width="8" height="290" fill="#FFEAA8" opacity="0.5" />
+
+    <!-- 4. Glass Light Reflections & Specular Highlights -->
+    <!-- Left soft vertical highlight -->
+    <path d="M 168 340 L 168 625 C 168 635 174 642 186 644 L 186 330 C 174 332 168 335 168 340 Z" fill="#FFFFFF" opacity="0.32" />
+    <!-- Shoulder highlight -->
+    <ellipse cx="250" cy="305" rx="70" ry="12" fill="#FFFFFF" opacity="0.18" />
+    <!-- Right thin crisp highlight reflection -->
+    <line x1="332" y1="335" x2="332" y2="630" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" opacity="0.22" />
+
+    <!-- 5. Matte Black Wraparound Label (As in Reference 1) -->
+    <rect x="153" y="355" width="194" height="255" rx="5" fill="url(#label-dark)" stroke="#3A2D1A" stroke-width="1.5" />
+    <!-- Subtle gold accent borders on label -->
+    <line x1="162" y1="363" x2="338" y2="363" stroke="#D4AF37" stroke-width="1.2" opacity="0.8" />
+    <line x1="162" y1="602" x2="338" y2="602" stroke="#D4AF37" stroke-width="1.2" opacity="0.8" />
+
+    <!-- Label Content: SHATAVARI AYURVEDIC Brand Branding -->
+    <g transform="translate(250, 400)">
+      <!-- Herbal Leaf Emblem -->
+      <circle cx="0" cy="0" r="16" fill="#D4AF37" opacity="0.2" />
+      <path d="M 0 -10 C 6 -4 7 4 0 10 C -7 4 -6 -4 0 -10 Z" fill="#D4AF37" />
+      <path d="M 0 -5 C -3 0 -2 4 0 7 C 2 4 3 0 0 -5 Z" fill="#FFFFFF" opacity="0.4" />
+      <circle cx="0" cy="12" r="1.5" fill="#D4AF37" />
+      
+      <!-- Brand Name -->
+      <text x="0" y="28" font-family="'Playfair Display', serif" font-size="11.5" font-weight="700" fill="#D4AF37" text-anchor="middle" letter-spacing="2">SHATAVARI</text>
+      <text x="0" y="39" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" fill="#E8D7BF" text-anchor="middle" letter-spacing="1.5">AYURVEDIC</text>
+      
+      <!-- Divider -->
+      <line x1="-55" y1="48" x2="55" y2="48" stroke="#D4AF37" stroke-width="0.8" opacity="0.6" />
+      
+      <!-- Product Title -->
+      <text x="0" y="70" font-family="'Playfair Display', serif" font-size="15" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">KUMKUMADI</text>
+      <text x="0" y="86" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="500" fill="#EAD9BD" text-anchor="middle">Miraculous Beauty Oil</text>
+      
+      <!-- Tag Pill -->
+      <rect x="-65" y="100" width="130" height="20" rx="10" fill="#D4AF37" />
+      <text x="0" y="114" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="800" fill="#1C1405" text-anchor="middle" letter-spacing="0.8">KASHMIRI SAFFRON</text>
+      
+      <!-- Purity Spec -->
+      <text x="0" y="142" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" fill="#D4AF37" text-anchor="middle" letter-spacing="0.5">26-HERB VEDIC ELIXIR</text>
+      <text x="0" y="160" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">30 ML • 1.0 FL. OZ</text>
+    </g>
+
+    <!-- 6. Dropper Collar / Cap (Matte Black with Ribbing) -->
+    <rect x="200" y="168" width="100" height="70" rx="5" fill="url(#cap-collar)" stroke="#111111" stroke-width="1" />
+    <!-- Collar Vertical Grip Ribs -->
+    <g opacity="0.18">
+      <line x1="210" y1="172" x2="210" y2="234" stroke="#FFFFFF" stroke-width="2" />
+      <line x1="220" y1="172" x2="220" y2="234" stroke="#FFFFFF" stroke-width="2" />
+      <line x1="230" y1="172" x2="230" y2="234" stroke="#FFFFFF" stroke-width="2" />
+      <line x1="240" y1="172" x2="240" y2="234" stroke="#FFFFFF" stroke-width="2" />
+      <line x1="250" y1="172" x2="250" y2="234" stroke="#FFFFFF" stroke-width="2" />
+      <line x1="260" y1="172" x2="260" y2="234" stroke="#FFFFFF" stroke-width="2" />
+      <line x1="270" y1="172" x2="270" y2="234" stroke="#FFFFFF" stroke-width="2" />
+      <line x1="280" y1="172" x2="280" y2="234" stroke="#FFFFFF" stroke-width="2" />
+      <line x1="290" y1="172" x2="290" y2="234" stroke="#FFFFFF" stroke-width="2" />
+    </g>
+    <!-- Collar bevel light reflection -->
+    <rect x="202" y="170" width="96" height="4" fill="#FFFFFF" opacity="0.2" rx="1" />
+
+    <!-- 7. Tapered Rubber Dropper Bulb (Top) -->
+    <!-- Characteristic shape with smooth contour -->
+    <path
+      d="M 230 168 C 230 145 236 125 240 85 C 242 62 245 42 250 42 C 255 42 258 62 260 85 C 264 125 270 145 270 168 Z"
+      fill="url(#rubber-bulb)"
+      stroke="#181818"
+      stroke-width="1.5"
+    />
+    <!-- Rubber soft curved highlight -->
+    <path
+      d="M 245 65 C 246 80 244 110 238 150"
+      stroke="#FFFFFF"
+      stroke-width="3"
+      stroke-linecap="round"
+      opacity="0.22"
+      fill="none"
+    />
+  </g>
+</svg>

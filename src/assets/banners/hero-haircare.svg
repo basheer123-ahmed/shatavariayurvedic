@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="hair-aura" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#E1EEDF" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#CEE2CC" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#FAF7F2" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="gold-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="40%" stop-color="#FFF3A8" />
+      <stop offset="80%" stop-color="#B8860B" />
+      <stop offset="100%" stop-color="#8B6508" />
+    </linearGradient>
+    <filter id="hero-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="20" flood-color="#122416" flood-opacity="0.22" />
+    </filter>
+  </defs>
+
+  <!-- Stage Podium -->
+  <ellipse cx="350" cy="520" rx="300" ry="40" fill="url(#hair-aura)" />
+  <ellipse cx="350" cy="525" rx="220" ry="22" fill="#152D1B" opacity="0.14" />
+
+  <!-- Botanical foliage -->
+  <g opacity="0.25" transform="translate(60, 110)">
+    <path d="M 0 160 C 90 60 180 30 260 0 C 220 80 180 180 80 220 Z" fill="#1D4A27" />
+  </g>
+  <g opacity="0.25" transform="translate(640, 130) scale(-1, 1)">
+    <path d="M 0 160 C 90 60 180 30 260 0 C 220 80 180 180 80 220 Z" fill="#285E34" />
+  </g>
+
+  <!-- LEFT: Onion & Kalonji Shampoo -->
+  <g transform="translate(100, 120) scale(0.9)" filter="url(#hero-shadow)">
+    <rect x="155" y="150" width="190" height="295" rx="25" fill="#4D1027" />
+    <rect x="232" y="110" width="36" height="25" rx="3" fill="#242424" />
+    <rect x="165" y="210" width="170" height="205" rx="8" fill="#300817" stroke="#F7A7C0" stroke-width="2" />
+    <text x="250" y="260" font-family="'Playfair Display', serif" font-size="11" font-weight="700" fill="#F7A7C0" text-anchor="middle">SHATAVARI</text>
+    <text x="250" y="300" font-family="'Playfair Display', serif" font-size="15" font-weight="800" fill="#FFF" text-anchor="middle">ONION &amp; KALONJI</text>
+    <text x="250" y="320" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#E8D7BF" text-anchor="middle">Revitalizing Shampoo</text>
+    <rect x="180" y="338" width="140" height="22" rx="11" fill="#F7A7C0" />
+    <text x="250" y="353" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#300817" text-anchor="middle">SULFATE &amp; PARABEN FREE</text>
+  </g>
+
+  <!-- RIGHT: Bhringraj & Brahmi Intensive Hair Oil -->
+  <g transform="translate(340, 105) scale(1.05)" filter="url(#hero-shadow)">
+    <rect x="155" y="150" width="190" height="295" rx="25" fill="#123D26" />
+    <rect x="232" y="105" width="36" height="30" rx="4" fill="url(#gold-metal)" />
+    <rect x="165" y="210" width="170" height="205" rx="8" fill="#0A1E13" stroke="#D4AF37" stroke-width="2.2" />
+    <circle cx="250" cy="242" r="17" fill="#D4AF37" opacity="0.3" />
+    <text x="250" y="266" font-family="'Playfair Display', serif" font-size="11" font-weight="700" fill="#D4AF37" text-anchor="middle">SHATAVARI</text>
+    <text x="250" y="277" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#FFF" text-anchor="middle">AYURVEDIC</text>
+    <line x1="185" y1="285" x2="315" y2="285" stroke="#D4AF37" stroke-width="1.2" />
+    <text x="250" y="306" font-family="'Playfair Display', serif" font-size="15" font-weight="800" fill="#FFF" text-anchor="middle">BHRINGRAJ OIL</text>
+    <text x="250" y="324" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#D6C4A5" text-anchor="middle">Root Strengthening Formula</text>
+    <rect x="180" y="338" width="140" height="22" rx="11" fill="url(#gold-metal)" />
+    <text x="250" y="353" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#1C1808" text-anchor="middle">INTENSIVE HAIR THERAPY</text>
+    <text x="250" y="380" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="600" fill="#D4AF37" text-anchor="middle">ANTI-HAIRFALL &amp; REGROWTH</text>
+    <text x="250" y="398" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">NET VOL: 200 ML</text>
+  </g>
+
+  <!-- Anti Hairfall Seal -->
+  <g transform="translate(540, 440)">
+    <circle cx="50" cy="50" r="46" fill="url(#gold-metal)" filter="url(#hero-shadow)" />
+    <circle cx="50" cy="50" r="40" fill="#0C2516" />
+    <text x="50" y="44" font-family="'Playfair Display', serif" font-size="10" font-weight="800" fill="#D4AF37" text-anchor="middle">ROOT THERAPY</text>
+    <text x="50" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#FFF" text-anchor="middle">BHRINGRAJ</text>
+    <text x="50" y="68" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" fill="#E8D7BF" text-anchor="middle">ANTI-HAIRFALL</text>
+  </g>
+</svg>
