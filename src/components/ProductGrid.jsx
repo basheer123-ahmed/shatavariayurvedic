@@ -13,24 +13,8 @@ export const ProductGrid = ({
 }) => {
   const scrollContainerRef = useRef(null);
 
-  // Auto-scroll product cards every 3 seconds
-  useEffect(() => {
-    if (!carousel) return;
+  // Auto-scrolling disabled per user request: Users can browse manually via arrow buttons or swipe
 
-    const timer = setInterval(() => {
-      if (scrollContainerRef.current) {
-        const el = scrollContainerRef.current;
-        const maxScroll = el.scrollWidth - el.clientWidth;
-        if (el.scrollLeft >= maxScroll - 20) {
-          el.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          el.scrollBy({ left: 320, behavior: 'smooth' });
-        }
-      }
-    }, 3000);
-
-    return () => clearInterval(timer);
-  }, [carousel]);
 
   if (!products || products.length === 0) {
     return (

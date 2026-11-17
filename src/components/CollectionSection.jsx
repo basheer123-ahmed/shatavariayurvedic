@@ -13,22 +13,8 @@ export const CollectionSection = ({
 }) => {
   const scrollRef = useRef(null);
 
-  // Auto-scroll collection cards every 3 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (scrollRef.current) {
-        const el = scrollRef.current;
-        const maxScroll = el.scrollWidth - el.clientWidth;
-        if (el.scrollLeft >= maxScroll - 20) {
-          el.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          el.scrollBy({ left: 320, behavior: 'smooth' });
-        }
-      }
-    }, 3000);
+  // Auto-scrolling disabled: Users browse products manually via arrow buttons or swipe
 
-    return () => clearInterval(timer);
-  }, []);
 
   const scroll = (direction) => {
     if (scrollRef.current) {
