@@ -42,8 +42,9 @@ export const CartDrawer = () => {
         onClick={closeCart}
       />
 
-      <div className="fixed inset-y-0 right-0 max-w-full flex">
-        <div className="w-full sm:w-[420px] max-w-full bg-[#FAF7F2] shadow-2xl flex flex-col z-50 border-l border-[#E5DAC6]">
+      {/* Drawer Container: Full screen on mobile, 420px slide-over on sm & desktop */}
+      <div className="fixed inset-0 sm:inset-y-0 sm:left-auto sm:right-0 w-full sm:w-[420px] flex z-50">
+        <div className="w-full h-full bg-[#FAF7F2] shadow-2xl flex flex-col sm:border-l border-[#E5DAC6] overflow-hidden">
           
           {/* Drawer Header */}
           <div className="p-4 sm:p-5 bg-white border-b border-[#E8DEC9] flex items-center justify-between">

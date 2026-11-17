@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
 import { Search, ShoppingBag, User, Menu, X, ChevronDown, Sparkles } from 'lucide-react';
 import { Logo } from './Logo';
 import { useCart } from '../context/CartContext';
@@ -12,6 +12,7 @@ export const Navbar = () => {
   const [isAccountOpen, setIsAccountOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -209,10 +210,16 @@ export const Navbar = () => {
                 )}
               </div>
 
-              {/* Shopping Bag / Cart with Dynamic Count */}
+              {/* Shopping Bag / Cart with Dynamic Count (Navigates to /cart on mobile, opens drawer on desktop) */}
               <button
                 type="button"
-                onClick={openCart}
+                onClick={() => {
+                  if (window.innerWidth < 768) {
+                    navigate('/cart');
+                  } else {
+                    openCart();
+                  }
+                }}
                 className="p-2 sm:p-2.5 text-[#153C27] hover:text-[#C59A3F] hover:bg-[#F0EAE0] rounded-full transition-colors relative flex items-center justify-center"
                 aria-label={`Shopping Cart with ${totalItems} items`}
                 title="View Shopping Bag"
@@ -350,6 +357,27 @@ export const Navbar = () => {
               >
                 <span>Contact Us</span>
               </NavLink>
+
+              {/* Mobile Dedicated Cart Page Link */}
+              <div className="pt-2 border-t border-[#E8DEC9]">
+                <NavLink
+                  to="/cart"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={({ isActive }) =>
+                    `flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold transition ${
+                      isActive ? 'bg-[#153C27] text-white' : 'bg-[#EBF3ED] text-[#153C27] hover:bg-[#DDEEE1]'
+                    }`
+                  }
+                >
+                  <span className="flex items-center gap-2">
+                    <ShoppingBag size={16} className="text-[#C59A3F]" />
+                    <span>Shopping Cart</span>
+                  </span>
+                  <span className="text-[11px] bg-[#C59A3F] text-white px-2.5 py-0.5 rounded-full font-bold">
+                    {totalItems} items
+                  </span>
+                </NavLink>
+              </div>
             </div>
 
             {/* Mobile Drawer Footer */}
