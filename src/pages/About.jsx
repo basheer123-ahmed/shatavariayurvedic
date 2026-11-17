@@ -150,50 +150,53 @@ export const About = () => {
 
           {/* Executive Leadership & Certificate Card (Right Col) */}
           <div className="lg:col-span-5 flex flex-col justify-between">
-            <div className="h-full rounded-3xl bg-gradient-to-b from-[#153C27] to-[#0D2418] text-white p-6 sm:p-8 border-2 border-[#D4C3A6] shadow-xl flex flex-col justify-between relative overflow-hidden">
+            <div
+              className="h-full rounded-3xl bg-[#153C27] text-white p-6 sm:p-8 border-2 border-[#C59A3F] shadow-xl flex flex-col justify-between relative overflow-hidden"
+              style={{ backgroundColor: '#153C27' }}
+            >
               <div>
-                <div className="flex items-center justify-between gap-2 pb-5 border-b border-white/15">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C59A3F]/25 text-[#ECC468] text-[11px] font-bold uppercase tracking-wider border border-[#C59A3F]/40">
+                <div className="flex items-center justify-between gap-2 pb-5 border-b border-white/20">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C59A3F]/30 text-[#FFD778] text-[11px] font-bold uppercase tracking-wider border border-[#C59A3F]/50">
                     <Quote size={13} />
                     <span>Driven by Excellence</span>
                   </div>
-                  <span className="text-[10px] uppercase font-bold text-white/60 tracking-widest">
+                  <span className="text-[10px] uppercase font-bold text-[#FFD778]/90 tracking-widest">
                     Tirupati, AP
                   </span>
                 </div>
 
                 <blockquote
-                  className="mt-6 text-base sm:text-lg font-medium italic text-[#FAF7F2] leading-relaxed"
+                  className="mt-6 text-base sm:text-lg font-medium italic text-white leading-relaxed"
                   style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   "We don't just sell medicines; we advocate for a lifestyle shift. Ayurveda is the science of life, and our goal is to bring that life back to its most vibrant state."
                 </blockquote>
 
-                <div className="mt-4 pt-4 border-t border-white/10">
-                  <div className="text-sm font-bold text-[#ECC468] tracking-wide">
+                <div className="mt-4 pt-4 border-t border-white/20">
+                  <div className="text-sm font-bold text-[#FFD778] tracking-wide">
                     The Board of Directors
                   </div>
-                  <div className="text-xs text-white/70 font-medium">
+                  <div className="text-xs text-white/90 font-medium">
                     M/s. Shatavari Ayurvedic and Pharmaceutical Private Limited
                   </div>
                 </div>
               </div>
 
               {/* Verified Facility Official Address Box */}
-              <div className="mt-6 p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 space-y-2 text-xs">
-                <div className="flex items-start gap-2 text-white/90">
-                  <MapPin size={15} className="text-[#ECC468] flex-shrink-0 mt-0.5" />
+              <div className="mt-6 p-4 rounded-2xl bg-black/25 backdrop-blur-md border border-white/20 space-y-2 text-xs">
+                <div className="flex items-start gap-2 text-white">
+                  <MapPin size={15} className="text-[#FFD778] flex-shrink-0 mt-0.5" />
                   <span className="leading-snug">
                     23-7-169, 3rd Floor, Santhi Nagar, MR Palli Circle, Tirupati, AP - 517502
                   </span>
                 </div>
-                <div className="flex items-center justify-between gap-2 pt-2 border-t border-white/10 text-[11px] text-white/80">
+                <div className="flex items-center justify-between gap-2 pt-2 border-t border-white/15 text-[11px] text-white/90">
                   <span className="flex items-center gap-1.5">
-                    <Phone size={13} className="text-[#ECC468]" />
+                    <Phone size={13} className="text-[#FFD778]" />
                     <span>+91 94937 82350</span>
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <Mail size={13} className="text-[#ECC468]" />
+                    <Mail size={13} className="text-[#FFD778]" />
                     <span>shatavariayurvedic@gmail.com</span>
                   </span>
                 </div>
