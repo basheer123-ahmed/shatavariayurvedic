@@ -329,19 +329,11 @@ export const HeroBanner = () => {
             <ChevronRight size={20} className="group-hover:translate-x-0.5 transition-transform" />
           </button>
 
-          {/* Desktop 2-Column Layout */}
+          {/* Desktop 2-Column Layout (Clean normal luxury way for laptop & desktop) */}
           <div
             key={`desktop-${current.id}`}
-            className={`relative rounded-3xl p-8 lg:p-12 border-2 border-[#B88728] ring-4 ring-[#C59A3F]/20 bg-gradient-to-r ${current.bgGradient} grid grid-cols-12 gap-8 items-center shadow-xl shadow-[#C59A3F]/10 animate-fadeIn overflow-hidden`}
+            className={`rounded-3xl p-8 lg:p-12 border border-[#E2D5BF] bg-gradient-to-r ${current.bgGradient} grid grid-cols-12 gap-8 items-center shadow-sm animate-fadeIn`}
           >
-            {/* Luxury Ayurvedic Inset Gold Border */}
-            <div className="absolute inset-2.5 rounded-[22px] border border-[#C59A3F]/50 pointer-events-none" />
-
-            {/* Traditional Ayurvedic Gold Corner Accents */}
-            <div className="absolute top-3.5 left-3.5 w-8 h-8 border-t-[3px] border-l-[3px] border-[#B88728] rounded-tl pointer-events-none" />
-            <div className="absolute top-3.5 right-3.5 w-8 h-8 border-t-[3px] border-r-[3px] border-[#B88728] rounded-tr pointer-events-none" />
-            <div className="absolute bottom-3.5 left-3.5 w-8 h-8 border-b-[3px] border-l-[3px] border-[#B88728] rounded-bl pointer-events-none" />
-            <div className="absolute bottom-3.5 right-3.5 w-8 h-8 border-b-[3px] border-r-[3px] border-[#B88728] rounded-br pointer-events-none" />
             {/* Left 7 Cols */}
             <div className="col-span-7 space-y-4">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-[#D4C3A6] text-xs font-semibold text-[#153C27] tracking-wider uppercase shadow-xs">
