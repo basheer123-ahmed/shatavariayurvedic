@@ -45,41 +45,6 @@ export const AboutSection = () => {
           </p>
         </div>
 
-        {/* Real Data Metrics Bar */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-12 sm:mb-16">
-          <div className="p-4 sm:p-6 rounded-2xl bg-white border border-[#E9DFCF] shadow-xs text-center group hover:border-[#C59A3F] transition-all">
-            <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#153C27] mb-1">
-              15,000<span className="text-[#C59A3F]">+</span>
-            </div>
-            <div className="text-xs font-bold text-[#153C27] uppercase tracking-wider mb-1">Sq. Ft. Facility</div>
-            <div className="text-[11px] text-[#718273]">Tirupati cGMP Manufacturing Plant</div>
-          </div>
-
-          <div className="p-4 sm:p-6 rounded-2xl bg-white border border-[#E9DFCF] shadow-xs text-center group hover:border-[#C59A3F] transition-all">
-            <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#153C27] mb-1">
-              0.0<span className="text-[#C59A3F]">%</span>
-            </div>
-            <div className="text-xs font-bold text-[#153C27] uppercase tracking-wider mb-1">Heavy Metals</div>
-            <div className="text-[11px] text-[#718273]">ICP-MS Lab Tested Every Batch</div>
-          </div>
-
-          <div className="p-4 sm:p-6 rounded-2xl bg-white border border-[#E9DFCF] shadow-xs text-center group hover:border-[#C59A3F] transition-all">
-            <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#153C27] mb-1">
-              16<span className="text-[#C59A3F]">+</span>
-            </div>
-            <div className="text-xs font-bold text-[#153C27] uppercase tracking-wider mb-1">Pure Formulations</div>
-            <div className="text-[11px] text-[#718273]">Standardized Vedic Pharmacopoeia</div>
-          </div>
-
-          <div className="p-4 sm:p-6 rounded-2xl bg-white border border-[#E9DFCF] shadow-xs text-center group hover:border-[#C59A3F] transition-all">
-            <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#153C27] mb-1">
-              50,000<span className="text-[#C59A3F]">+</span>
-            </div>
-            <div className="text-xs font-bold text-[#153C27] uppercase tracking-wider mb-1">Families Served</div>
-            <div className="text-[11px] text-[#718273]">Across AP, Telangana &amp; South India</div>
-          </div>
-        </div>
-
         {/* 2-Column Corporate Story Content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch mb-12 sm:mb-16">
           
