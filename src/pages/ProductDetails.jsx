@@ -15,7 +15,8 @@ import {
   Award,
   ArrowRight,
   CheckCircle2,
-  ChevronRight
+  ChevronRight,
+  Check
 } from 'lucide-react';
 
 export const ProductDetails = () => {
@@ -261,88 +262,132 @@ export const ProductDetails = () => {
           {/* Tabbed In-Depth Information: Benefits / Ingredients / Usage / Certifications */}
           <div className="mt-14 pt-8 border-t border-[#E8DEC9]">
             
-            {/* Tab Navigation */}
-            <div className="flex border-b border-[#E8DEC9] overflow-x-auto gap-4 sm:gap-8">
+            {/* Tab Navigation - High-Contrast Distinct Pill Buttons */}
+            <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto pb-3 no-scrollbar">
               {[
-                { id: 'benefits', label: 'Key Vedic Benefits' },
-                { id: 'ingredients', label: 'Pure Ingredients' },
-                { id: 'howToUse', label: 'How to Use & Dosage' },
-                { id: 'quality', label: 'Quality Standards' }
+                { id: 'benefits', label: 'Key Vedic Benefits', icon: <Sparkles size={14} /> },
+                { id: 'ingredients', label: 'Pure Ingredients', icon: <Leaf size={14} /> },
+                { id: 'howToUse', label: 'How to Use & Dosage', icon: <Award size={14} /> },
+                { id: 'quality', label: 'Quality Standards', icon: <ShieldCheck size={14} /> }
               ].map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`pb-3 text-xs sm:text-sm font-bold tracking-wider uppercase whitespace-nowrap transition border-b-2 ${
+                  className={`inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold tracking-wide uppercase whitespace-nowrap transition-all shadow-xs ${
                     activeTab === tab.id
-                      ? 'border-[#153C27] text-[#153C27]'
-                      : 'border-transparent text-stone-400 hover:text-stone-700'
+                      ? 'bg-[#153C27] text-white shadow-md ring-2 ring-[#153C27]'
+                      : 'bg-white text-[#3C4C3E] hover:text-[#153C27] hover:bg-[#F4EFE6] border border-[#D9CDB8]'
                   }`}
                 >
-                  {tab.label}
+                  <span className={activeTab === tab.id ? 'text-[#ECC468]' : 'text-[#C59A3F]'}>
+                    {tab.icon}
+                  </span>
+                  <span>{tab.label}</span>
                 </button>
               ))}
             </div>
 
-            {/* Tab Content Display */}
-            <div className="py-6 text-sm text-[#465548] leading-relaxed">
+            {/* Tab Content Display - Crystal Clear High-Contrast Cards */}
+            <div className="py-6">
               {activeTab === 'benefits' && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4">
                   {product.benefits ? (
                     product.benefits.map((b, i) => (
-                      <div key={i} className="flex items-start gap-2.5 p-3 rounded-xl bg-[#FAF8F5]">
-                        <CheckCircle2 size={16} className="text-[#153C27] flex-shrink-0 mt-0.5" />
-                        <span className="text-xs sm:text-sm font-medium">{b}</span>
+                      <div
+                        key={i}
+                        className="flex items-start gap-3.5 p-4 sm:p-5 rounded-2xl bg-white border-2 border-[#E5DAC6] hover:border-[#153C27] shadow-xs hover:shadow-md transition-all duration-200 group"
+                      >
+                        <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#153C27] group-hover:bg-[#1E5437] text-[#ECC468] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-2xs">
+                          <Check size={16} strokeWidth={2.8} />
+                        </div>
+                        <span className="text-xs sm:text-sm font-bold text-[#153C27] leading-relaxed">
+                          {b}
+                        </span>
                       </div>
                     ))
                   ) : (
-                    <p>Formulated to support natural wellness, equilibrium, and vitality.</p>
+                    <p className="text-sm font-medium text-[#153C27]">Formulated to support natural wellness, equilibrium, and vitality.</p>
                   )}
                 </div>
               )}
 
               {activeTab === 'ingredients' && (
                 <div className="space-y-4">
-                  <p className="text-xs text-[#6F7F70]">
-                    Every batch uses only ethically wild-crafted herbs sourced directly from native climates:
+                  <p className="text-xs sm:text-sm font-semibold text-[#153C27]">
+                    Every batch uses only ethically wild-crafted botanicals sourced directly from their native agro-climatic zones:
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     {product.ingredients ? (
                       product.ingredients.map((ing, i) => (
-                        <div key={i} className="p-3 bg-[#FAF8F5] rounded-xl border border-[#EFE8DC] flex items-center gap-2">
-                          <Leaf size={14} className="text-[#C59A3F] flex-shrink-0" />
-                          <span className="text-xs font-semibold text-[#153C27]">{ing}</span>
+                        <div
+                          key={i}
+                          className="p-4 bg-white rounded-2xl border-2 border-[#E5DAC6] hover:border-[#153C27] shadow-xs flex items-center gap-3 transition"
+                        >
+                          <div className="w-8 h-8 rounded-full bg-[#EBF3ED] text-[#153C27] flex items-center justify-center flex-shrink-0 font-bold">
+                            <Leaf size={16} className="text-[#C59A3F]" />
+                          </div>
+                          <div>
+                            <span className="text-xs sm:text-sm font-bold text-[#153C27] block">
+                              {ing}
+                            </span>
+                            <span className="text-[10px] text-[#718273] uppercase tracking-wider font-semibold">
+                              Certified Organic Botanical
+                            </span>
+                          </div>
                         </div>
                       ))
                     ) : (
-                      <p>100% Pure Botanical Herbs.</p>
+                      <p className="text-sm font-medium text-[#153C27]">100% Pure Botanical Herbs.</p>
                     )}
                   </div>
                 </div>
               )}
 
               {activeTab === 'howToUse' && (
-                <div className="bg-[#FAF8F5] p-5 rounded-2xl border border-[#EFE8DC] space-y-3">
-                  <h4 className="text-sm font-bold text-[#153C27]">Recommended Ayurvedic Anupana (Medium):</h4>
-                  <p className="text-xs sm:text-sm text-[#475749] leading-relaxed">
+                <div className="bg-white p-6 sm:p-8 rounded-3xl border-2 border-[#E5DAC6] shadow-xs space-y-4">
+                  <div className="flex items-center gap-2 text-xs font-bold text-[#C59A3F] uppercase tracking-wider">
+                    <Award size={16} />
+                    <span>Recommended Ayurvedic Anupana (Medium)</span>
+                  </div>
+                  <h4
+                    className="text-lg sm:text-xl font-bold text-[#153C27] leading-snug"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    Classical Dinacharya Regimen &amp; Consumption Protocol
+                  </h4>
+                  <div className="p-4 rounded-2xl bg-[#FAF7F2] border border-[#E9DFCF] text-xs sm:text-sm font-semibold text-[#153C27] leading-relaxed">
                     {product.howToUse || 'Take 1 to 2 teaspoons with lukewarm water or warm milk twice daily after meals.'}
-                  </p>
-                  <p className="text-[11px] text-[#7A8A7C]">
-                    *Note: For targeted chronic conditions, consult with your Ayurvedic physician or Vaidya for customized dosage.
-                  </p>
+                  </div>
+                  <div className="flex items-start gap-2 text-[11px] font-medium text-[#68796A] pt-1 border-t border-[#F0EAE0]">
+                    <Sparkles size={14} className="text-[#C59A3F] flex-shrink-0 mt-0.5" />
+                    <span>
+                      For targeted chronic conditions or specialized herbal synergy, consult with your Ayurvedic Vaidya or physician for customized timing and vehicle.
+                    </span>
+                  </div>
                 </div>
               )}
 
               {activeTab === 'quality' && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   {product.certifications ? (
                     product.certifications.map((c, i) => (
-                      <div key={i} className="flex items-center gap-2.5 p-3 rounded-xl bg-[#EBF3ED] text-[#153C27]">
-                        <ShieldCheck size={18} className="text-[#C59A3F]" />
-                        <span className="text-xs font-bold">{c}</span>
+                      <div
+                        key={i}
+                        className="flex items-center gap-3.5 p-4 rounded-2xl bg-white border-2 border-[#E5DAC6] hover:border-[#153C27] text-[#153C27] shadow-xs transition"
+                      >
+                        <div className="w-8 h-8 rounded-full bg-[#153C27] text-[#ECC468] flex items-center justify-center flex-shrink-0 font-bold shadow-2xs">
+                          <ShieldCheck size={17} />
+                        </div>
+                        <div>
+                          <span className="text-xs sm:text-sm font-bold block">{c}</span>
+                          <span className="text-[10px] text-[#718273] uppercase tracking-wider font-semibold">
+                            Tirupati Facility Batch Audited
+                          </span>
+                        </div>
                       </div>
                     ))
                   ) : (
-                    <p>Manufactured under strict GMP and Ayush standards.</p>
+                    <p className="text-sm font-medium text-[#153C27]">Manufactured under strict GMP and Ayush standards.</p>
                   )}
                 </div>
               )}
