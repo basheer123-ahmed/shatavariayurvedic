@@ -158,19 +158,21 @@ export const ProductDetails = () => {
               </div>
 
               {/* Price Block */}
-              <div className="p-4 bg-[#FAF7F2] rounded-2xl border border-[#EBE3D5] flex items-baseline gap-3">
-                <span className="text-3xl font-extrabold text-[#153C27]">
+              <div className="p-3.5 sm:p-4 bg-[#FAF7F2] rounded-2xl border border-[#EBE3D5] flex flex-wrap items-baseline gap-2 sm:gap-3">
+                <span className="text-2xl sm:text-3xl font-extrabold text-[#153C27]">
                   ₹{product.price}
                 </span>
                 {product.originalPrice && product.originalPrice > product.price && (
-                  <span className="text-base text-stone-400 line-through">
+                  <span className="text-sm sm:text-base text-stone-400 line-through">
                     ₹{product.originalPrice}
                   </span>
                 )}
-                <span className="text-xs text-[#205232] font-semibold bg-[#E2EFE5] px-2.5 py-0.5 rounded-full">
-                  Save ₹{product.originalPrice - product.price} ({product.discount}%)
-                </span>
-                <span className="ml-auto text-[11px] text-[#788879]">Inclusive of all taxes</span>
+                {product.discount > 0 && (
+                  <span className="text-xs text-[#205232] font-semibold bg-[#E2EFE5] px-2.5 py-0.5 rounded-full">
+                    Save ₹{product.originalPrice - product.price} ({product.discount}%)
+                  </span>
+                )}
+                <span className="w-full sm:w-auto sm:ml-auto text-[11px] text-[#788879]">Inclusive of all taxes</span>
               </div>
 
               {/* Short Description */}
