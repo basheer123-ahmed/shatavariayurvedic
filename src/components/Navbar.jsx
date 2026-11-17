@@ -236,59 +236,6 @@ export const Navbar = () => {
               </button>
             </div>
           </div>
-
-          {/* Mobile Secondary Quick-Nav Strip (Visible only on mobile < md) */}
-          <nav className="flex md:hidden items-center justify-between gap-1 pt-2.5 mt-2 border-t border-[#EAE0CF]">
-            <NavLink
-              to="/"
-              end
-              className={({ isActive }) =>
-                `flex-1 text-center py-1 px-1 rounded-lg text-xs font-semibold transition ${
-                  isActive
-                    ? 'text-[#153C27] bg-[#EAE3D4] font-bold shadow-2xs'
-                    : 'text-[#48564A] hover:bg-[#F4EEE2]'
-                }`
-              }
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                `flex-1 text-center py-1 px-1 rounded-lg text-xs font-semibold transition ${
-                  isActive
-                    ? 'text-[#153C27] bg-[#EAE3D4] font-bold shadow-2xs'
-                    : 'text-[#48564A] hover:bg-[#F4EEE2]'
-                }`
-              }
-            >
-              About Us
-            </NavLink>
-            <NavLink
-              to="/products"
-              className={({ isActive }) =>
-                `flex-1 text-center py-1 px-1 rounded-lg text-xs font-semibold transition ${
-                  isActive || location.pathname.startsWith('/product') || location.pathname.startsWith('/shop')
-                    ? 'text-[#153C27] bg-[#EAE3D4] font-bold shadow-2xs'
-                    : 'text-[#48564A] hover:bg-[#F4EEE2]'
-                }`
-              }
-            >
-              Products
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                `flex-1 text-center py-1 px-1 rounded-lg text-xs font-semibold transition ${
-                  isActive
-                    ? 'text-[#153C27] bg-[#EAE3D4] font-bold shadow-2xs'
-                    : 'text-[#48564A] hover:bg-[#F4EEE2]'
-                }`
-              }
-            >
-              Contact Us
-            </NavLink>
-          </nav>
         </div>
       </header>
 
