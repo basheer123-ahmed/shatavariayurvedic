@@ -310,13 +310,13 @@ export const HeroBanner = () => {
         {/* DESKTOP / TABLET HERO SHOWCASE (Visible on md: & above)    */}
         {/* ======================================================== */}
         <div className="hidden md:block relative">
-          {/* Desktop 2-Column Layout (Clean borderless view for laptop & desktop) */}
+          {/* Desktop 2-Column Layout (Properly proportioned luxury banner for laptop & desktop) */}
           <div
             key={`desktop-${current.id}`}
-            className={`rounded-3xl p-8 lg:p-12 bg-gradient-to-r ${current.bgGradient} grid grid-cols-12 gap-8 items-center shadow-xs animate-fadeIn`}
+            className={`relative rounded-3xl p-8 lg:px-12 lg:py-10 min-h-[440px] lg:min-h-[460px] bg-gradient-to-r ${current.bgGradient} grid grid-cols-12 gap-8 items-center shadow-sm overflow-hidden animate-fadeIn`}
           >
             {/* Left 7 Cols */}
-            <div className="col-span-7 space-y-4">
+            <div className="col-span-7 space-y-4 lg:space-y-5 z-10">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-[#D4C3A6] text-xs font-semibold text-[#153C27] tracking-wider uppercase shadow-xs">
                 {current.tagIcon}
                 <span>{current.tag}</span>
@@ -339,7 +339,7 @@ export const HeroBanner = () => {
               <div className="pt-2 flex items-center gap-3">
                 <Link
                   to={current.primaryBtnLink}
-                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#153C27] hover:bg-[#1E5437] text-white font-semibold text-xs tracking-wider shadow-md shadow-[#153C27]/20 transition"
+                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#153C27] hover:bg-[#1E5437] text-white font-semibold text-xs tracking-wider shadow-md shadow-[#153C27]/20 transition active:scale-95"
                 >
                   <span>{current.primaryBtnText}</span>
                   <ArrowRight size={15} />
@@ -348,7 +348,7 @@ export const HeroBanner = () => {
                 <button
                   type="button"
                   onClick={() => setRitualModalOpen(true)}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-[#FAF8F5] text-[#153C27] border border-[#C59A3F]/50 font-semibold text-xs tracking-wider shadow-xs transition"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-[#FAF8F5] text-[#153C27] border border-[#C59A3F]/50 font-semibold text-xs tracking-wider shadow-xs transition active:scale-95"
                 >
                   <Compass size={15} className="text-[#C59A3F]" />
                   <span>{current.secondaryBtnText}</span>
@@ -372,15 +372,18 @@ export const HeroBanner = () => {
             </div>
 
             {/* Right 5 Cols */}
-            <div className="col-span-5 flex items-center justify-center relative">
-              <div className="relative flex items-center justify-center w-full py-4">
-                <div className="absolute inset-0 bg-[#C59A3F]/20 rounded-full filter blur-2xl transform scale-75 pointer-events-none" />
+            <div className="col-span-5 flex items-center justify-center relative h-full">
+              <div className="relative flex items-center justify-center w-full py-2">
+                <div className="absolute inset-0 bg-[#C59A3F]/15 rounded-full filter blur-2xl transform scale-75 pointer-events-none" />
+                
                 <img
                   src={current.image}
                   alt={current.imageAlt}
-                  className="w-auto max-h-[360px] lg:max-h-[400px] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500 relative z-10"
+                  className="w-auto max-h-[300px] lg:max-h-[340px] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500 relative z-10"
                 />
-                <div className="absolute bottom-2 left-2 bg-white/95 backdrop-blur-md border border-[#E5DAC6] py-1.5 px-3 rounded-2xl shadow-md z-20 flex items-center gap-2">
+
+                {/* Floating Trust Badge: Safely positioned inside the card */}
+                <div className="absolute bottom-1 left-0 lg:left-2 bg-white/95 backdrop-blur-md border border-[#E5DAC6] py-1.5 px-3 rounded-2xl shadow-md z-20 flex items-center gap-2">
                   <div className="w-7 h-7 rounded-full bg-[#153C27] text-[#C59A3F] flex items-center justify-center font-bold text-[11px]">
                     {current.badgeRating}
                   </div>
