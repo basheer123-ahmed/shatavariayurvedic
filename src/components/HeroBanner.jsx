@@ -310,25 +310,6 @@ export const HeroBanner = () => {
         {/* DESKTOP / TABLET HERO SHOWCASE (Visible on md: & above)    */}
         {/* ======================================================== */}
         <div className="hidden md:block relative">
-          {/* Navigation Arrows (Desktop) */}
-          <button
-            type="button"
-            onClick={prevSlide}
-            className="absolute -left-4 lg:left-2 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-[#153C27] hover:text-[#C59A3F] border border-[#E0D5C1] shadow-lg items-center justify-center transition-all active:scale-95 flex group"
-            aria-label="Previous Slide"
-          >
-            <ChevronLeft size={20} className="group-hover:-translate-x-0.5 transition-transform" />
-          </button>
-
-          <button
-            type="button"
-            onClick={nextSlide}
-            className="absolute -right-4 lg:right-2 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-[#153C27] hover:text-[#C59A3F] border border-[#E0D5C1] shadow-lg items-center justify-center transition-all active:scale-95 flex group"
-            aria-label="Next Slide"
-          >
-            <ChevronRight size={20} className="group-hover:translate-x-0.5 transition-transform" />
-          </button>
-
           {/* Desktop 2-Column Layout (Clean borderless view for laptop & desktop) */}
           <div
             key={`desktop-${current.id}`}
