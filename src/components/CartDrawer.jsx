@@ -42,8 +42,8 @@ export const CartDrawer = () => {
         onClick={closeCart}
       />
 
-      <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-[#FAF7F2] shadow-2xl flex flex-col z-50 border-l border-[#E5DAC6]">
+      <div className="fixed inset-y-0 right-0 max-w-full flex">
+        <div className="w-full sm:w-[420px] max-w-full bg-[#FAF7F2] shadow-2xl flex flex-col z-50 border-l border-[#E5DAC6]">
           
           {/* Drawer Header */}
           <div className="p-4 sm:p-5 bg-white border-b border-[#E8DEC9] flex items-center justify-between">
