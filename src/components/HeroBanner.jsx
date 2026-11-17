@@ -329,10 +329,10 @@ export const HeroBanner = () => {
             <ChevronRight size={20} className="group-hover:translate-x-0.5 transition-transform" />
           </button>
 
-          {/* Desktop 2-Column Layout (Clean normal luxury way for laptop & desktop) */}
+          {/* Desktop 2-Column Layout (Clean borderless view for laptop & desktop) */}
           <div
             key={`desktop-${current.id}`}
-            className={`rounded-3xl p-8 lg:p-12 border border-[#E2D5BF] bg-gradient-to-r ${current.bgGradient} grid grid-cols-12 gap-8 items-center shadow-sm animate-fadeIn`}
+            className={`rounded-3xl p-8 lg:p-12 bg-gradient-to-r ${current.bgGradient} grid grid-cols-12 gap-8 items-center shadow-xs animate-fadeIn`}
           >
             {/* Left 7 Cols */}
             <div className="col-span-7 space-y-4">
