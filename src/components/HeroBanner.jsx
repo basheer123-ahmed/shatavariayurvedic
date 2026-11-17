@@ -53,13 +53,13 @@ export const HeroBanner = () => {
     },
     {
       id: 'slide-skincare',
-      tag: 'Royal 26-Herb Vedic Elixir',
+      tag: 'Royal 26-Herb Vedic Beauty Elixir',
       offer: 'Flat 25% OFF • Kashmiri Saffron & Chandan',
       tagIcon: <Sparkles size={13} className="text-[#D4AF37]" />,
       headingPrefix: 'Sacred Radiance with Pure',
       headingAccent: 'Kumkumadi Tailam',
       description:
-        'Royal 26-herb formulation slow-simmered for 72 continuous hours to illuminate blemishes and restore natural golden skin.',
+        'Royal 26-herb Ayurvedic formulation slow-simmered for 72 continuous hours to illuminate blemishes and reveal natural golden skin.',
       primaryBtnText: 'Explore Skincare',
       primaryBtnLink: '/products?category=natural-skincare',
       secondaryBtnText: 'Explore Rituals',
@@ -195,225 +195,230 @@ export const HeroBanner = () => {
   const current = slides[currentSlide];
 
   return (
-    <section className="relative w-full max-w-full overflow-hidden bg-[#FAF7F2] pt-2.5 sm:pt-6 pb-4 sm:pb-8 border-b border-[#E8DEC9]">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        
-        {/* ======================================================== */}
-        {/* MOBILE APP-STYLE BANNER CARD (Visible on Mobile < md)     */}
-        {/* Matches Flipkart / Myntra / Amazon e-commerce card banner */}
-        {/* ======================================================== */}
+    <section className={`relative w-full max-w-full overflow-hidden transition-all duration-700 bg-gradient-to-r ${current.bgGradient} border-b border-[#E8DEC9]`}>
+      
+      {/* ======================================================== */}
+      {/* MOBILE APP-STYLE BANNER CARD (Visible on Mobile < md)     */}
+      {/* Matches Flipkart / Myntra / Amazon e-commerce card banner */}
+      {/* ======================================================== */}
+      <div
+        className="md:hidden relative w-full px-3 pt-3 pb-4"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        {/* Rounded Promotional Card Container */}
         <div
-          className="md:hidden relative w-full"
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
+          key={`mobile-${current.id}`}
+          className={`relative w-full h-[195px] sm:h-[220px] rounded-2xl overflow-hidden shadow-lg border-2 border-[#C59A3F] ring-2 ring-[#C59A3F]/20 bg-gradient-to-r ${current.bgGradient} p-3.5 flex items-center justify-between animate-fadeIn transition-all duration-500`}
         >
-          {/* Rounded Promotional Card Container */}
-          <div
-            key={`mobile-${current.id}`}
-            className={`relative w-full h-[195px] sm:h-[220px] rounded-2xl overflow-hidden shadow-lg border-2 border-[#C59A3F] ring-2 ring-[#C59A3F]/20 bg-gradient-to-r ${current.bgGradient} p-3.5 flex items-center justify-between animate-fadeIn transition-all duration-500`}
-          >
-            {/* Inset Decorative Gold Border */}
-            <div className="absolute inset-1.5 rounded-[12px] border border-[#C59A3F]/35 pointer-events-none" />
+          {/* Inset Decorative Gold Border */}
+          <div className="absolute inset-1.5 rounded-[12px] border border-[#C59A3F]/35 pointer-events-none" />
 
-            {/* Traditional Ornamental Corner Accents (Matching user's screenshot) */}
-            <div className="absolute top-2 left-2 w-3.5 h-3.5 border-t-2 border-l-2 border-[#C59A3F] rounded-tl pointer-events-none" />
-            <div className="absolute top-2 right-2 w-3.5 h-3.5 border-t-2 border-r-2 border-[#C59A3F] rounded-tr pointer-events-none" />
-            <div className="absolute bottom-2 left-2 w-3.5 h-3.5 border-b-2 border-l-2 border-[#C59A3F] rounded-bl pointer-events-none" />
-            <div className="absolute bottom-2 right-2 w-3.5 h-3.5 border-b-2 border-r-2 border-[#C59A3F] rounded-br pointer-events-none" />
+          {/* Traditional Ornamental Corner Accents (Matching user's screenshot) */}
+          <div className="absolute top-2 left-2 w-3.5 h-3.5 border-t-2 border-l-2 border-[#C59A3F] rounded-tl pointer-events-none" />
+          <div className="absolute top-2 right-2 w-3.5 h-3.5 border-t-2 border-r-2 border-[#C59A3F] rounded-tr pointer-events-none" />
+          <div className="absolute bottom-2 left-2 w-3.5 h-3.5 border-b-2 border-l-2 border-[#C59A3F] rounded-bl pointer-events-none" />
+          <div className="absolute bottom-2 right-2 w-3.5 h-3.5 border-b-2 border-r-2 border-[#C59A3F] rounded-br pointer-events-none" />
 
-            {/* Left 62% Content Column */}
-            <div className="w-[62%] z-10 flex flex-col justify-between h-full pr-1">
-              <div>
-                {/* Top Badge */}
-                <span className="inline-flex items-center gap-1 text-[9px] uppercase font-bold text-[#8C6216] tracking-wider mb-1 line-clamp-1">
-                  {current.tagIcon}
-                  <span>{current.tag}</span>
-                </span>
-
-                {/* Main Heading */}
-                <h2
-                  className="text-sm font-bold text-[#153C27] leading-tight line-clamp-2"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  {current.headingPrefix}{' '}
-                  <span className="text-[#93520E] italic font-serif">
-                    {current.headingAccent}
-                  </span>
-                </h2>
-
-                {/* Offer Pill (e-commerce special) */}
-                <div className="mt-1.5 inline-block">
-                  <span className="px-2 py-0.5 rounded-md bg-[#153C27]/10 text-[#153C27] text-[10px] font-bold tracking-tight line-clamp-1 border border-[#153C27]/15">
-                    {current.offer}
-                  </span>
-                </div>
-              </div>
-
-              {/* Action Buttons Row */}
-              <div className="pt-2 flex items-center gap-2">
-                <Link
-                  to={current.primaryBtnLink}
-                  className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-[#153C27] text-[#ECC468] text-[11px] font-bold shadow-xs active:scale-95 transition"
-                >
-                  <span>Shop</span>
-                  <ArrowRight size={12} />
-                </Link>
-
-                <button
-                  type="button"
-                  onClick={() => setRitualModalOpen(true)}
-                  className="px-2.5 py-1.5 rounded-full bg-white/90 text-[#153C27] text-[10px] font-semibold border border-[#D9CDB8] shadow-2xs"
-                >
-                  Ritual
-                </button>
-              </div>
-            </div>
-
-            {/* Right 38% Studio Packshot Bottle Area */}
-            <div className="w-[38%] h-full flex items-center justify-center relative">
-              {/* Soft gold backlight glow */}
-              <div className="absolute inset-0 bg-[#C59A3F]/20 rounded-full filter blur-xl transform scale-75 pointer-events-none" />
-              
-              <img
-                src={current.image}
-                alt={current.imageAlt}
-                className="w-auto h-full max-h-[170px] sm:max-h-[195px] object-contain drop-shadow-xl relative z-10 transform scale-105"
-              />
-
-              {/* Quality Rating Badge */}
-              <div className="absolute bottom-1 right-0 z-20 bg-white/95 backdrop-blur-md px-1.5 py-0.5 rounded-lg border border-[#E0D5C1] shadow-xs text-[9px] font-bold text-[#153C27]">
-                {current.badgeRating}
-              </div>
-            </div>
-          </div>
-
-          {/* Clean App-Style Indicators (Directly below card, matches user's screenshot) */}
-          <div className="flex items-center justify-center gap-1.5 mt-2.5">
-            {slides.map((_, idx) => (
-              <button
-                key={idx}
-                type="button"
-                onClick={() => selectSlide(idx)}
-                className={`transition-all duration-300 ${
-                  currentSlide === idx
-                    ? 'w-7 h-1 bg-[#153C27] rounded-full'
-                    : 'w-2 h-1 bg-[#D5C9B4] hover:bg-[#A3927B] rounded-full'
-                }`}
-                aria-label={`Go to slide ${idx + 1}`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* ======================================================== */}
-        {/* DESKTOP / TABLET HERO SHOWCASE (Visible on md: & above)    */}
-        {/* ======================================================== */}
-        <div className="hidden md:block relative">
-          {/* Desktop 2-Column Layout (Properly proportioned luxury banner for laptop & desktop) */}
-          <div
-            key={`desktop-${current.id}`}
-            className={`relative rounded-3xl p-8 lg:px-12 lg:py-10 min-h-[440px] lg:min-h-[460px] bg-gradient-to-r ${current.bgGradient} grid grid-cols-12 gap-8 items-center shadow-sm overflow-hidden animate-fadeIn`}
-          >
-            {/* Left 7 Cols */}
-            <div className="col-span-7 space-y-4 lg:space-y-5 z-10">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-[#D4C3A6] text-xs font-semibold text-[#153C27] tracking-wider uppercase shadow-xs">
+          {/* Left 62% Content Column */}
+          <div className="w-[62%] z-10 flex flex-col justify-between h-full pr-1">
+            <div>
+              {/* Top Badge */}
+              <span className="inline-flex items-center gap-1 text-[9px] uppercase font-bold text-[#8C6216] tracking-wider mb-1 line-clamp-1">
                 {current.tagIcon}
                 <span>{current.tag}</span>
-              </div>
+              </span>
 
-              <h1
-                className="text-3xl lg:text-5xl font-bold text-[#153C27] tracking-tight leading-[1.15]"
+              {/* Main Heading */}
+              <h2
+                className="text-sm font-bold text-[#153C27] leading-tight line-clamp-2"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {current.headingPrefix}{' '}
                 <span className="text-[#93520E] italic font-serif">
                   {current.headingAccent}
                 </span>
-              </h1>
+              </h2>
 
-              <p className="text-sm lg:text-base text-[#556357] max-w-lg leading-relaxed">
-                {current.description}
-              </p>
-
-              <div className="pt-2 flex items-center gap-3">
-                <Link
-                  to={current.primaryBtnLink}
-                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#153C27] hover:bg-[#1E5437] text-white font-semibold text-xs tracking-wider shadow-md shadow-[#153C27]/20 transition active:scale-95"
-                >
-                  <span>{current.primaryBtnText}</span>
-                  <ArrowRight size={15} />
-                </Link>
-
-                <button
-                  type="button"
-                  onClick={() => setRitualModalOpen(true)}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-[#FAF8F5] text-[#153C27] border border-[#C59A3F]/50 font-semibold text-xs tracking-wider shadow-xs transition active:scale-95"
-                >
-                  <Compass size={15} className="text-[#C59A3F]" />
-                  <span>{current.secondaryBtnText}</span>
-                </button>
-              </div>
-
-              <div className="pt-4 border-t border-[#DFD3BE] grid grid-cols-3 gap-3 max-w-md">
-                <div className="flex items-center gap-2">
-                  <ShieldCheck size={16} className="text-[#153C27]" />
-                  <div className="text-[11px] font-bold text-[#153C27]">100% Herbal</div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Award size={16} className="text-[#153C27]" />
-                  <div className="text-[11px] font-bold text-[#153C27]">GMP Certified</div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Leaf size={16} className="text-[#153C27]" />
-                  <div className="text-[11px] font-bold text-[#153C27]">Wild Harvested</div>
-                </div>
+              {/* Offer Pill (e-commerce special) */}
+              <div className="mt-1.5 inline-block">
+                <span className="px-2 py-0.5 rounded-md bg-[#153C27]/10 text-[#153C27] text-[10px] font-bold tracking-tight line-clamp-1 border border-[#153C27]/15">
+                  {current.offer}
+                </span>
               </div>
             </div>
 
-            {/* Right 5 Cols */}
-            <div className="col-span-5 flex items-center justify-center relative h-full">
-              <div className="relative flex items-center justify-center w-full py-2">
-                <div className="absolute inset-0 bg-[#C59A3F]/15 rounded-full filter blur-2xl transform scale-75 pointer-events-none" />
-                
-                <img
-                  src={current.image}
-                  alt={current.imageAlt}
-                  className="w-auto max-h-[300px] lg:max-h-[340px] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500 relative z-10"
-                />
+            {/* Action Buttons Row */}
+            <div className="pt-2 flex items-center gap-2">
+              <Link
+                to={current.primaryBtnLink}
+                className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-[#153C27] text-[#ECC468] text-[11px] font-bold shadow-xs active:scale-95 transition"
+              >
+                <span>Shop</span>
+                <ArrowRight size={12} />
+              </Link>
 
-                {/* Floating Trust Badge: Safely positioned inside the card */}
-                <div className="absolute bottom-1 left-0 lg:left-2 bg-white/95 backdrop-blur-md border border-[#E5DAC6] py-1.5 px-3 rounded-2xl shadow-md z-20 flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-full bg-[#153C27] text-[#C59A3F] flex items-center justify-center font-bold text-[11px]">
-                    {current.badgeRating}
-                  </div>
-                  <div className="text-left">
-                    <div className="text-xs font-bold text-[#153C27]">{current.badgeTitle}</div>
-                    <div className="text-[9px] text-[#697B6B]">{current.badgeSubtitle}</div>
-                  </div>
-                </div>
-              </div>
+              <button
+                type="button"
+                onClick={() => setRitualModalOpen(true)}
+                className="px-2.5 py-1.5 rounded-full bg-white/90 text-[#153C27] text-[10px] font-semibold border border-[#D9CDB8] shadow-2xs"
+              >
+                Ritual
+              </button>
             </div>
           </div>
 
-          {/* Desktop Slider Indicators */}
-          <div className="flex items-center justify-center gap-2 mt-4">
-            {slides.map((_, idx) => (
-              <button
-                key={idx}
-                type="button"
-                onClick={() => selectSlide(idx)}
-                className={`transition-all duration-300 ${
-                  currentSlide === idx
-                    ? 'w-8 h-1.5 bg-[#153C27] rounded-full'
-                    : 'w-2.5 h-1.5 bg-[#D5C9B4] hover:bg-[#A3927B] rounded-full'
-                }`}
-                aria-label={`Go to slide ${idx + 1}`}
-              />
-            ))}
+          {/* Right 38% Studio Packshot Bottle Area */}
+          <div className="w-[38%] h-full flex items-center justify-center relative">
+            <div className="absolute inset-0 bg-[#C59A3F]/20 rounded-full filter blur-xl transform scale-75 pointer-events-none" />
+            
+            <img
+              src={current.image}
+              alt={current.imageAlt}
+              className="w-auto h-full max-h-[170px] sm:max-h-[195px] object-contain drop-shadow-xl relative z-10 transform scale-105"
+            />
+
+            <div className="absolute bottom-1 right-0 z-20 bg-white/95 backdrop-blur-md px-1.5 py-0.5 rounded-lg border border-[#E0D5C1] shadow-xs text-[9px] font-bold text-[#153C27]">
+              {current.badgeRating}
+            </div>
           </div>
         </div>
 
+        {/* Clean App-Style Indicators */}
+        <div className="flex items-center justify-center gap-1.5 mt-2.5">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              type="button"
+              onClick={() => selectSlide(idx)}
+              className={`transition-all duration-300 ${
+                currentSlide === idx
+                  ? 'w-7 h-1 bg-[#153C27] rounded-full'
+                  : 'w-2 h-1 bg-[#D5C9B4] hover:bg-[#A3927B] rounded-full'
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* ======================================================== */}
+      {/* DESKTOP / TABLET HERO SHOWCASE (Visible on md: & above)    */}
+      {/* Full-width seamless hero layout matching user's design    */}
+      {/* ======================================================== */}
+      <div className="hidden md:block relative w-full">
+        <div
+          key={`desktop-${current.id}`}
+          className="max-w-7xl mx-auto px-6 lg:px-12 py-10 lg:py-16 grid grid-cols-12 gap-8 lg:gap-12 items-center animate-fadeIn"
+        >
+          {/* Left 7 Cols */}
+          <div className="col-span-7 space-y-5 lg:space-y-6">
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-[#D4C3A6] text-xs font-semibold text-[#153C27] tracking-wider uppercase shadow-xs">
+              {current.tagIcon}
+              <span>{current.tag}</span>
+            </div>
+
+            <h1
+              className="text-4xl lg:text-6xl font-bold text-[#153C27] tracking-tight leading-[1.12]"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              {current.headingPrefix}{' '}
+              <span className="text-[#93520E] italic font-serif">
+                {current.headingAccent}
+              </span>
+            </h1>
+
+            <p className="text-base lg:text-lg text-[#556357] max-w-xl leading-relaxed">
+              {current.description}
+            </p>
+
+            <div className="pt-2 flex items-center gap-4">
+              <Link
+                to={current.primaryBtnLink}
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#153C27] hover:bg-[#1E5437] text-white font-semibold text-xs tracking-wider uppercase shadow-lg shadow-[#153C27]/20 transition active:scale-95"
+              >
+                <span>{current.primaryBtnText}</span>
+                <ArrowRight size={15} />
+              </Link>
+
+              <button
+                type="button"
+                onClick={() => setRitualModalOpen(true)}
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-[#FAF8F5] text-[#153C27] border border-[#C59A3F]/50 font-semibold text-xs tracking-wider uppercase shadow-xs transition active:scale-95"
+              >
+                <Compass size={15} className="text-[#C59A3F]" />
+                <span>{current.secondaryBtnText}</span>
+              </button>
+            </div>
+
+            {/* 3 Trust Badges with Subtitles (Matching user screenshot) */}
+            <div className="pt-6 border-t border-[#DFD3BE]/80 grid grid-cols-3 gap-4 max-w-lg">
+              <div className="flex items-start gap-2.5">
+                <ShieldCheck size={18} className="text-[#153C27] flex-shrink-0 mt-0.5" />
+                <div>
+                  <div className="text-xs font-bold text-[#153C27]">100% Herbal</div>
+                  <div className="text-[10px] text-[#697B6B]">No Synthetic Binders</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <Award size={18} className="text-[#153C27] flex-shrink-0 mt-0.5" />
+                <div>
+                  <div className="text-xs font-bold text-[#153C27]">GMP Certified</div>
+                  <div className="text-[10px] text-[#697B6B]">Vedic Standardization</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <Leaf size={18} className="text-[#153C27] flex-shrink-0 mt-0.5" />
+                <div>
+                  <div className="text-xs font-bold text-[#153C27]">Wild Harvested</div>
+                  <div className="text-[10px] text-[#697B6B]">Native Habitat Roots</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right 5 Cols */}
+          <div className="col-span-5 flex items-center justify-center relative">
+            <div className="relative flex items-center justify-center w-full py-4">
+              <div className="absolute inset-0 bg-[#C59A3F]/15 rounded-full filter blur-3xl transform scale-90 pointer-events-none" />
+              
+              <img
+                src={current.image}
+                alt={current.imageAlt}
+                className="w-auto max-h-[380px] lg:max-h-[440px] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500 relative z-10"
+              />
+
+              {/* Floating Trust Badge */}
+              <div className="absolute -bottom-2 right-4 lg:right-8 bg-white/95 backdrop-blur-md border border-[#E5DAC6] py-2 px-3.5 rounded-2xl shadow-xl z-20 flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-full bg-[#153C27] text-[#C59A3F] flex items-center justify-center font-bold text-xs">
+                  {current.badgeRating}
+                </div>
+                <div className="text-left">
+                  <div className="text-xs font-bold text-[#153C27]">{current.badgeTitle}</div>
+                  <div className="text-[10px] text-[#697B6B]">{current.badgeSubtitle}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Slider Indicators */}
+        <div className="flex items-center justify-center gap-2 pb-6">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              type="button"
+              onClick={() => selectSlide(idx)}
+              className={`transition-all duration-300 ${
+                currentSlide === idx
+                  ? 'w-8 h-1.5 bg-[#153C27] rounded-full'
+                  : 'w-2.5 h-1.5 bg-[#D5C9B4] hover:bg-[#A3927B] rounded-full'
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Interactive Ayurvedic Ritual Modal */}
